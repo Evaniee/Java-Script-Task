@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Item Cost Calculator</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1 id="heading">Item Cost Calculator</h1>
+        <p>Calculate how much to pay for your item and its shipping</p>
+        <form>
+            <div>
+                Initial total cost before shipping:<br>
+                <input type="number" min="1" name="totalCost" required>
+            </div>
+            <div>
+                Shipping Type: standard, priority, same day<br>
+                <input type="text" name="shippingType" required>
+                <div id="shippingTypeFeedback"></div>
+            </div>
+            <div>
+                Number of installments to pay in:<br>
+                <input type="number" min="1" name="numInstallments" required>
+            </div>
+            <button>Submit</button>
+        </form>
+        <hr>
+        <div id="results">
+            <h2>Results</h2>
+            <p>Total with shipping:</p>
+            <div id="totalWithShipping"></div>
+            <p>Each installment is:</p>
+            <div id="perInstallment"></div>
+        </div>
+    </div>
+    <div id="controls">
+        <button id="rightButton">Move right</button>
+        <button id="leftButton">Move left</button>
+        <button id="closeButton">Close</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
